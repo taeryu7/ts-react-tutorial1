@@ -92,3 +92,9 @@ Greetings.defaultProps = {
 export default Greetings;
 ↑ 위에는 화살표 함수를 사용을 안한 형태의 파일이다.
 
+
+TypeScript 와 Context API 활용하기
+커스텀 Hooks인 useSampleState 와 useSampleDispatch 에서는 null 체킹을 해주는것이 매우 중요하다.
+만약 Context가 지니고 있는 값이 유효하지 않으면 에러를 발생시는 코드를 작성했는데, 이를 통해서 추후 Hooks 를 사용하게 될 때 각 Hooks 함수들이 반환하는 값이 언제나 유효하다는 것을 보장 할 수 있다.
+이렇게 null 체킹을 하지 않는다면 useSampleState 의 결과값의 타입은 State | null 이 된다. null 체킹을 하면 State 가 된다.
+
